@@ -52,12 +52,11 @@ public class NumberGuessGame {
     
         int input = sc.nextInt();
         
-    
-        
         if(nums1.contains(input)) {
             System.out.println("You've already guessed this number, try another one!");
             Check(sc, product, product2, tries, tries2, tries3, product3, nums1, minInput, maxInput );
          }
+        
         if(input < minInput){
             System.out.println("This is less that the minimum!");
             Check(sc, product, product2, tries, tries2, tries3, product3, nums1, minInput, maxInput);
@@ -83,7 +82,7 @@ public class NumberGuessGame {
          if(input == product) {
             System.out.println("You got the correct number!");
             System.out.println("You took " + tries + " guesses to get the number");
+            System.exit(product);
         }
-
-         }
+    }
 }
