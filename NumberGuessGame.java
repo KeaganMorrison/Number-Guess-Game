@@ -1,3 +1,4 @@
+//Keagan Morrison 2022
 import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.Random;
@@ -36,7 +37,7 @@ public class NumberGuessGame {
     int product = randNum.nextInt(minInput,maxInput); 
     int product2 = randNum.nextInt(minInput,maxInput);
     int product3 = randNum.nextInt(minInput,maxInput);
-    
+// main function    
     Check(sc, product, product2, tries, tries2, tries3, product3,nums1, minInput, maxInput);
     }
     
