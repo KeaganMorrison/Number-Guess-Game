@@ -53,7 +53,7 @@ public class NumberGuessGame {
         int input = sc.nextInt();
         
     
-        while(input!=product){
+        
         if(nums1.contains(input)) {
             System.out.println("You've already guessed this number, try another one!");
             Check(sc, product, product2, tries, tries2, tries3, product3, nums1, minInput, maxInput );
@@ -86,5 +86,4 @@ public class NumberGuessGame {
         }
 
          }
-    }
 }
