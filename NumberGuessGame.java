@@ -36,10 +36,10 @@ public class NumberGuessGame {
     int product = randNum.nextInt(minInput,maxInput); 
    
 // main function    
-    Check(sc, product, product2, tries, tries2, tries3, product3,nums1, minInput, maxInput);
+    Check(sc, product,  tries, nums1, minInput, maxInput);
     }
     
-    public static void Check(Scanner sc, int product, int product2, int tries, int tries2, int tries3, int product3,ArrayList<Integer> nums1, int minInput, int maxInput) {
+    public static void Check(Scanner sc, int product,  int tries ,ArrayList<Integer> nums1, int minInput, int maxInput) {
        
         
     if(sc.hasNextInt()==false) {
@@ -53,28 +53,28 @@ public class NumberGuessGame {
         
         if(nums1.contains(input)) {
             System.out.println("You've already guessed this number, try another one!");
-            Check(sc, product, product2, tries, tries2, tries3, product3, nums1, minInput, maxInput );
+            Check(sc, product, tries, nums1, minInput, maxInput );
          }
         
         if(input < minInput){
             System.out.println("This is less that the minimum!");
-            Check(sc, product, product2, tries, tries2, tries3, product3, nums1, minInput, maxInput);
+            Check(sc, product, tries,  nums1, minInput, maxInput);
         }
         if(input > maxInput){
             System.out.println("This is over the maximum!");
-            Check(sc, product, product2, tries, tries2, tries3, product3, nums1, minInput, maxInput);
+            Check(sc, product,  tries,  nums1, minInput, maxInput);
         }
         if(input < product) {
                 System.out.println("Go Higher!" + "(" + tries + ")");
                 tries = tries + 1;
                 nums1.add(input);
-                Check(sc, product, product2, tries, tries2, tries3, product3, nums1, minInput, maxInput);
+                Check(sc, product,  tries,  nums1, minInput, maxInput);
              }
         if(input > product) {
             System.out.println("Go Lower!"+ "(" + tries + ")");
             tries = tries + 1;
             nums1.add(input);
-            Check(sc, product, product2, tries, tries2, tries3, product3,nums1, minInput, maxInput);
+            Check(sc, product, tries, nums1, minInput, maxInput);
          }
          
         
