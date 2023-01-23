@@ -11,8 +11,7 @@ public class NumberGuessGame {
     Scanner sc = new Scanner(System.in);
     ArrayList<Integer> nums1 = new ArrayList<Integer>();
     int tries = 1;
-    int tries2 = 1;
-    int tries3 = 1;
+    
     Random randNum = new Random();
     
     System.out.println("Set your boundries(Minimum)");
@@ -35,8 +34,7 @@ public class NumberGuessGame {
    
     System.out.println("Guess the number! You must guess within a range of " + minInput + " to " + maxInput + "!" );
     int product = randNum.nextInt(minInput,maxInput); 
-    int product2 = randNum.nextInt(minInput,maxInput);
-    int product3 = randNum.nextInt(minInput,maxInput);
+   
 // main function    
     Check(sc, product, product2, tries, tries2, tries3, product3,nums1, minInput, maxInput);
     }
